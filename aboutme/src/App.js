@@ -7,6 +7,8 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Education from './components/Education';
+import Footer from './components/Footer';
+import { motion } from "framer-motion";
 function App() {
   return (
     <div className="App">
@@ -14,8 +16,9 @@ function App() {
       <About />
       <Experience />
       <Skills />
-      <Contact />
       <Education />
+      <Contact />
+      <Footer />
     </div>
   );
 }
