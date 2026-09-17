@@ -1,0 +1,77 @@
+.marquee-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 8px 0 64px;
+}
+
+.marquee-row {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: marquee-left linear infinite;
+  padding: 4px 0;
+}
+
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track.reverse {
+  animation-name: marquee-right;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.marquee-chip {
+  padding: 10px 18px;
+  font-size: 0.85rem;
+}
+
+.marquee-icon {
+  display: inline-flex;
+  color: var(--accent-2);
+  font-size: 1rem;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stack-card {
+  padding: 26px;
+}
+
+.stack-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

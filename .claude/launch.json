@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aboutme-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "aboutme", "start"],
+      "port": 3000
+    }
+  ]
+}

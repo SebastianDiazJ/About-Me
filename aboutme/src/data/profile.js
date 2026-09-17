@@ -1,0 +1,35 @@
+export const profile = {
+  name: "Sebastián Díaz Jiménez",
+  firstName: "Sebastián",
+  role: "Desarrollador Full Stack",
+  roles: [
+    "Backend Java & Spring",
+    "Frontend React",
+    "Power Platform & Cloud",
+    "Soporte & Operaciones",
+  ],
+  location: "Medellín, Antioquia, Colombia",
+  email: "sebasdj2006@gmail.com",
+  github: "https://github.com/SebastianDiazJ",
+  linkedin: "https://www.linkedin.com/in/sebastian-diaz-jimenez-5512b7272/",
+  cvPath: "/SebasCV.pdf",
+  available: true,
+  tagline: "Transformo procesos reales en software que funciona.",
+  bio: [
+    "Estudiante de Ingeniería de Software (8.º semestre) y Tecnólogo en Desarrollo de Software, con más de 3 años de experiencia entre desarrollo Full Stack y soporte de aplicaciones en producción.",
+    "He pasado por back-end en Java y Spring Boot, front-end en React y Angular, y automatización empresarial con Power Platform. Me gusta entender el problema completo antes de tocar código: de ahí sale software que de verdad resuelve algo.",
+  ],
+  stats: [
+    { value: "3.5+", label: "Años de experiencia" },
+    { value: "6", label: "Empresas y equipos" },
+    { value: "4", label: "Certificaciones" },
+    { value: "2", label: "Idiomas (ES / EN)" },
+  ],
+  strengths: [
+    "Aprendizaje continuo",
+    "Resolución de problemas",
+    "Trabajo en equipo",
+    "Comunicación clara",
+    "Orientación a resultados",
+  ],
+};

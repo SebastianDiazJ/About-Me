@@ -1,0 +1,55 @@
+.approach-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.approach-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  transition: padding-left 0.3s ease;
+}
+
+.approach-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.approach-item:hover {
+  padding-left: 10px;
+}
+
+.approach-number {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 600;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.55;
+}
+
+.approach-body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.approach-body p {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  max-width: 620px;
+}
+
+@media (max-width: 600px) {
+  .approach-item {
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    padding: 24px 0;
+  }
+  .approach-number {
+    font-size: 1.7rem;
+  }
+}

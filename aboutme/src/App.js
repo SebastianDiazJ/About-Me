@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import React from "react";  
-import Header from "./components/Header";
-import About from "./components/About"; 
+import React from "react";
+import Loader from "./components/Loader";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Stack from "./components/Stack";
+import About from "./components/About";
 import Experience from "./components/Experience";
-import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Education from "./components/Education";
+import Approach from "./components/Approach";
 import Contact from "./components/Contact";
-import Education from './components/Education';
-import Footer from './components/Footer';
-import { motion } from "framer-motion";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="App">
-      <Header />
-      <About />
-      <Experience />
-      <Skills />
-      <Education />
-      <Contact />
+      <Loader />
+      <Navbar />
+      <main>
+        <Hero />
+        <Stack />
+        <About />
+        <Experience />
+        <Projects />
+        <Education />
+        <Approach />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

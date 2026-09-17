@@ -1,52 +1,68 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLaptopCode, FaServer, FaCloud } from "react-icons/fa";
-
-const experiences = [
-  {
-    title: "Seti SA – Desarrollador Backend Java-Spring",
-    period: "Septiembre 2025 - Actual",
-    description:
-      "Desarrollo backend con Java y Spring Boot, despliegues en AWS y mantenimiento de microservicios.",
-    icon: <FaCloud />,
-  },
-  {
-    title: "Protección S.A. – Desarrollador Pasante",
-    period: "Enero 2025 - Julio 2025",
-    description:
-      "Soluciones empresariales con Microsoft Power Apps, Power Automate y Power BI. Co-líder comunidad técnica interna +50 personas. Mantenimiento microservicios Java & Spring Boot.",
-    icon: <FaServer />,
-  },
-  {
-    title: "Soval – Líder de desarrollo digital",
-    period: "2023 - 2024",
-    description:
-      "Diseño y desarrollo de plataformas web y e-commerce con React y JavaScript. Mejora de UX y automatización de flujos.",
-    icon: <FaLaptopCode />,
-  },
-];
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { experience } from "../data/experience";
+import "./Experience.css";
 
 function Experience() {
   return (
-    <section className="experience" id="experience">
-      <h2>Experiencia Laboral</h2>
-      <div className="timeline">
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            className="timeline-item"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="timeline-icon">{exp.icon}</div>
-            <div className="timeline-content">
-              <h3>{exp.title}</h3>
-              <span>{exp.period}</span>
-              <p>{exp.description}</p>
-            </div>
-          </motion.div>
-        ))}
+    <section className="section experience" id="experience">
+      <div className="container">
+        <motion.div
+          className="section-head"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="eyebrow">Experiencia</span>
+          <h2>Dónde he trabajado</h2>
+          <p>De soporte en producción a desarrollo Full Stack: así ha sido mi camino en los últimos años.</p>
+        </motion.div>
+
+        <div className="timeline">
+          {experience.map((exp, i) => (
+            <motion.div
+              className="timeline-item"
+              key={exp.company + exp.period}
+              initial={{ opacity: 0, x: -24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
+            >
+              <span className={`timeline-dot ${exp.current ? "is-current" : ""}`} />
+
+              <div className="timeline-card card">
+                <div className="timeline-top">
+                  <span className="mono-tag timeline-period">{exp.period}</span>
+                  {exp.current && <span className="chip timeline-badge">Actual</span>}
+                </div>
+
+                <h3>{exp.role}</h3>
+                <p className="timeline-company">
+                  {exp.company} <span className="dot-sep">·</span>{" "}
+                  <span className="timeline-modality">
+                    <FaMapMarkerAlt /> {exp.modality}
+                  </span>
+                </p>
+
+                <ul className="timeline-impact">
+                  {exp.impact.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+
+                <div className="timeline-tech">
+                  {exp.tech.map((t) => (
+                    <span className="chip" key={t}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

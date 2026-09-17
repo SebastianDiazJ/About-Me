@@ -1,0 +1,41 @@
+:root {
+  /* surfaces */
+  --bg: #06060a;
+  --bg-soft: #0a0a11;
+  --surface: #101018;
+  --surface-2: #16161f;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  /* text */
+  --text: #f5f5fa;
+  --text-dim: #a3a3b8;
+  --text-mute: #6c6c84;
+
+  /* accents */
+  --accent: #7c5cff;
+  --accent-2: #22d3c5;
+  --accent-warm: #ff7a59;
+  --accent-rgb: 124, 92, 255;
+  --accent-2-rgb: 34, 211, 197;
+
+  --gradient: linear-gradient(135deg, var(--accent) 0%, #5b8cff 55%, var(--accent-2) 100%);
+  --gradient-text: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+
+  /* effects */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --shadow-glow: 0 0 0 1px var(--border), 0 20px 60px -20px rgba(124, 92, 255, 0.35);
+  --shadow-card: 0 10px 30px -12px rgba(0, 0, 0, 0.5);
+
+  /* type */
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* layout */
+  --container: 1180px;
+  --section-pad: clamp(72px, 10vw, 140px);
+}
