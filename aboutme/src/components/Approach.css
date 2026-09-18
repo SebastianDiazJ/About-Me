@@ -1,55 +1,95 @@
-.approach-list {
+.approach {
+  overflow: visible;
+}
+
+.blob-approach-a {
+  width: 380px;
+  height: 380px;
+  top: 10%;
+  left: -140px;
+  background: var(--accent);
+  opacity: 0.14;
+}
+
+.blob-approach-b {
+  width: 320px;
+  height: 320px;
+  bottom: 5%;
+  right: -100px;
+  background: var(--accent-warm);
+  opacity: 0.12;
+}
+
+.approach-stack-container {
+  position: relative;
+  z-index: 1;
+}
+
+.approach-stack {
+  position: relative;
+}
+
+.approach-frame {
+  position: relative;
+  min-height: 66vh;
+}
+
+.approach-frame:last-child {
+  min-height: 0;
+}
+
+.approach-stack-card {
+  position: sticky;
+  border-radius: var(--radius-lg);
+  padding: clamp(28px, 4vw, 48px);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  overflow: hidden;
+}
+
+.approach-stack-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.16), transparent 55%);
+  pointer-events: none;
+}
+
+.approach-stack-inner {
+  position: relative;
   display: flex;
-  flex-direction: column;
-}
-
-.approach-item {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 28px;
-  align-items: start;
-  padding: 32px 0;
-  border-top: 1px solid var(--border);
-  transition: padding-left 0.3s ease;
-}
-
-.approach-item:last-child {
-  border-bottom: 1px solid var(--border);
-}
-
-.approach-item:hover {
-  padding-left: 10px;
+  align-items: center;
+  gap: clamp(20px, 4vw, 40px);
 }
 
 .approach-number {
+  flex-shrink: 0;
   font-family: var(--font-display);
-  font-size: 2.4rem;
-  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 700;
   background: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.55;
+  line-height: 1;
 }
 
 .approach-body h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  margin-bottom: 12px;
 }
 
 .approach-body p {
-  font-size: 0.98rem;
+  font-size: 1rem;
   line-height: 1.75;
   max-width: 620px;
 }
 
-@media (max-width: 600px) {
-  .approach-item {
-    grid-template-columns: 56px 1fr;
-    gap: 16px;
-    padding: 24px 0;
+@media (max-width: 700px) {
+  .approach-frame {
+    min-height: 42vh;
   }
-  .approach-number {
-    font-size: 1.7rem;
+  .approach-stack-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
   }
 }

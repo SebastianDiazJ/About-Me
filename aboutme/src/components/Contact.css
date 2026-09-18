@@ -1,4 +1,24 @@
+.blob-contact-a {
+  width: 420px;
+  height: 420px;
+  top: -10%;
+  left: -160px;
+  background: var(--accent);
+  opacity: 0.13;
+}
+
+.blob-contact-b {
+  width: 340px;
+  height: 340px;
+  bottom: -10%;
+  right: -140px;
+  background: var(--accent-2);
+  opacity: 0.12;
+}
+
 .contact-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 60px;
@@ -27,14 +47,17 @@
   align-items: center;
   gap: 16px;
   padding: 16px 18px;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   transition: all 0.25s ease;
 }
 
 a.contact-link:hover {
   border-color: var(--accent-2);
+  background: var(--glass-bg-strong);
   transform: translateX(4px);
 }
 

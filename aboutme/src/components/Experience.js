@@ -7,6 +7,9 @@ import "./Experience.css";
 function Experience() {
   return (
     <section className="section experience" id="experience">
+      <div className="section-blobs" aria-hidden="true">
+        <span className="blob blob-experience-a" />
+      </div>
       <div className="container">
         <motion.div
           className="section-head"

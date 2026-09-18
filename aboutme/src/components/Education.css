@@ -1,4 +1,15 @@
+.blob-education-a {
+  width: 380px;
+  height: 380px;
+  bottom: -10%;
+  left: -140px;
+  background: var(--accent-warm);
+  opacity: 0.1;
+}
+
 .education-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 18px;
@@ -42,6 +53,8 @@
 }
 
 .cert-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;

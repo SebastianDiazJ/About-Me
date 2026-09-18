@@ -36,6 +36,10 @@ function Contact() {
 
   return (
     <section className="section contact" id="contact">
+      <div className="section-blobs" aria-hidden="true">
+        <span className="blob blob-contact-a" />
+        <span className="blob blob-contact-b" />
+      </div>
       <div className="container contact-inner">
         <motion.div
           className="contact-info"

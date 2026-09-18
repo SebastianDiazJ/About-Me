@@ -5,7 +5,19 @@
   overflow: hidden;
 }
 
+.blob-footer-a {
+  width: 500px;
+  height: 260px;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  opacity: 0.1;
+}
+
 .footer-top {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -76,6 +88,8 @@
 }
 
 .footer-bottom {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;

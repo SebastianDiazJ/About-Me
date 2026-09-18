@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaArrowDown } from "react-icons/fa";
-import { FaJava, FaReact } from "react-icons/fa";
-import { SiSpringboot } from "react-icons/si";
 import { profile } from "../data/profile";
 import heroPhotoWebp from "../assets/images/sebastian-hero.webp";
 import heroPhotoJpg from "../assets/images/sebastian-hero.jpg";
@@ -41,12 +39,6 @@ const badges = [
   { label: "Foco en resultados", className: "badge-right" },
 ];
 
-const floatIcons = [
-  { icon: <FaJava />, className: "float-java" },
-  { icon: <FaReact />, className: "float-react" },
-  { icon: <SiSpringboot />, className: "float-spring" },
-];
-
 function Hero() {
   const typed = useTypewriter(profile.roles);
   const visualRef = useRef(null);
@@ -70,6 +62,7 @@ function Hero() {
       <div className="hero-bg" aria-hidden="true">
         <span className="blob blob-a" />
         <span className="blob blob-b" />
+        <span className="blob blob-c" />
         <div className="hero-grid dot-grid" />
       </div>
 
@@ -155,17 +148,6 @@ function Hero() {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
                 {b.label}
-              </motion.span>
-            ))}
-
-            {floatIcons.map((f, i) => (
-              <motion.span
-                key={i}
-                className={`float-icon ${f.className}`}
-                animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 3.2 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
-              >
-                {f.icon}
               </motion.span>
             ))}
           </motion.div>

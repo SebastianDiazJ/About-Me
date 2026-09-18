@@ -38,6 +38,15 @@
   opacity: 0.28;
 }
 
+.blob-c {
+  width: 320px;
+  height: 320px;
+  top: 30%;
+  right: 12%;
+  background: var(--accent-warm);
+  opacity: 0.16;
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -196,9 +205,11 @@
 .photo-frame {
   position: absolute;
   inset: 18px -18px -18px 18px;
-  background-color: var(--surface);
-  border: 1px solid var(--border-strong);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   transform: rotate(-4deg);
   box-shadow: var(--shadow-glow);
 }
@@ -245,25 +256,6 @@
   bottom: 14%;
   right: -16%;
 }
-
-.float-icon {
-  position: absolute;
-  z-index: 3;
-  width: 46px;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--surface-2);
-  border: 1px solid var(--border-strong);
-  font-size: 1.3rem;
-  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.5);
-}
-
-.float-java { color: #f89820; top: 6%; right: -10%; }
-.float-react { color: #61dafb; bottom: -4%; left: 6%; }
-.float-spring { color: #6db33f; top: 46%; right: -6%; display: none; }
 
 .scroll-cue {
   position: absolute;

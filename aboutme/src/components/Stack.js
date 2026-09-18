@@ -26,6 +26,9 @@ function Stack() {
 
   return (
     <section className="section stack" id="stack">
+      <div className="section-blobs" aria-hidden="true">
+        <span className="blob blob-stack-a" />
+      </div>
       <div className="container">
         <motion.div
           className="section-head"

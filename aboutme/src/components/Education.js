@@ -7,6 +7,9 @@ import "./Education.css";
 function Education() {
   return (
     <section className="section education" id="education">
+      <div className="section-blobs" aria-hidden="true">
+        <span className="blob blob-education-a" />
+      </div>
       <div className="container">
         <motion.div
           className="section-head"

@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
+      <div className="grain-overlay" aria-hidden="true" />
       <Loader />
       <Navbar />
       <main>

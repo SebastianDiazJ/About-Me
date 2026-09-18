@@ -16,6 +16,9 @@ function Footer() {
 
   return (
     <footer className="footer">
+      <div className="section-blobs" aria-hidden="true">
+        <span className="blob blob-footer-a" />
+      </div>
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">

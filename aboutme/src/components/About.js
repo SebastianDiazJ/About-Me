@@ -16,6 +16,9 @@ const facts = [
 function About() {
   return (
     <section className="section about" id="about">
+      <div className="section-blobs" aria-hidden="true">
+        <span className="blob blob-about-a" />
+      </div>
       <div className="container about-inner">
         <motion.div
           className="about-media"
