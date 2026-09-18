@@ -11,6 +11,9 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent);
 }
 
 .hero-grid {

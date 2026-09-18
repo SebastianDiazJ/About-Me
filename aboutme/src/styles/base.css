@@ -228,6 +228,10 @@ img {
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
+  /* fade blobs out before they hit the section edge so they never get
+     hard-clipped into a visible seam at section boundaries */
+  mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
 }
 
 /* film-grain texture for editorial depth */
